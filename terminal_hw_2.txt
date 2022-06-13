@@ -1,0 +1,327 @@
+Termial. HW_2
+
+1. Сделать папку dir_1
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free
+$ mkdir dir_1
+
+2. Зайти в папку dir_1
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free
+$ cd dir_1
+
+ 3. Создать папку inner_dir_1
+ medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ mkdir inner_dir_1
+
+4. Посмотреть где ты находишься
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ pwd
+/c/group_30_free/dir_1
+
+ 5. Находясь в папке dir_1 создать пустой текстовый файл tf_1.txt
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ touch tf_1.txt
+
+6. Находясь в папке dir_1 через команду cat создать текстовый файл tf_2.txt со следующими строками:
+- the first 1
+- the second 2
+- the third 3
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ cat > tf_2.txt
+the first 1
+the second 2
+the third 3
+
+ 7. Зайти в папку inner_dir_1
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ cd inner_dir_1
+
+ 8. Через cat сделать текстовый файл tf_3.txt  c любыми строками
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cat > tf_3.txt
+1111
+2222
+3333
+
+9. Через cat добавить в текстовый файл tf_3.txt строку “the second 2”
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cat >> tf_3.txt
+the second 2
+
+10. Через cat добавить в текстовый файл tf_3.txt строку “the sec 2”
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cat >> tf_3.txt
+the sec 2
+
+11. Через cat добавить в текстовый файл tf_2.txt строку “the sec 3”
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cat >> ../tf_2.txt
+the sec 3
+
+12. Через cat добавить в текстовый файл tf_3.txt строку “the SeCoNd 2”
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cat >> tf_3.txt
+the SeCoNd 2
+
+13. Через cat добавить в текстовый файл tf_2.txt строку “the seConD 2”
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cat >> ../tf_2.txt
+the seConD 2
+
+14. Сделать текстовый файл tf_4.txt в котором будет 15 строк.
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cat > tf_4.txt
+111
+222
+333
+444
+555
+666
+777
+888
+999
+101010
+111111
+121212
+131313
+141414
+151515
+
+15. Сделать текстовый файл tF_5.txt в котором будет 13 строк.
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cat > tf_5.txt
+1) 111
+2) 222
+3) 333
+4) 444
+5) 555
+6) 666
+7) 777
+8) 888
+9) 999
+10) 101010
+11) 111111
+12) 121212
+13) 131313
+
+16. Вывести список всех файлов в папке.
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ ls -la
+total 3
+drwxr-xr-x 1 medved 197121   0 Jun 12 15:53 ./
+drwxr-xr-x 1 medved 197121   0 Jun 12 15:35 ../
+-rw-r--r-- 1 medved 197121  51 Jun 12 15:50 tf_3.txt
+-rw-r--r-- 1 medved 197121  78 Jun 12 15:52 tf_4.txt
+-rw-r--r-- 1 medved 197121 107 Jun 12 15:53 tf_5.txt
+
+17. Выйти из папки inner_dir_1
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cd ..
+
+18. Вывести содержимое файла tf_3.txt в терминал.
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ cat inner_dir_1/tf_3.txt
+1111
+2222
+3333
+the second 2
+the sec 2
+the SeCoNd 2
+
+19. Найти путь к файлу tf_4.txt
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ cd inner_dir_1
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ realpath tf_4.txt
+/c/group_30_free/dir_1/inner_dir_1/tf_4.txt
+
+20. Отчистить файл tf_4.txt от содержимого без удаления самого файла.
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ truncate -s 0 tf_4.txt
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cat tf_4.txt
+
+21. Найти путь к файлам у которых есть  “tf” в названии.
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cd ..
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ find . -name '*tf*'
+./inner_dir_1/tf_3.txt
+./inner_dir_1/tf_4.txt
+./inner_dir_1/tf_5.txt
+./tf_1.txt
+./tf_2.txt
+
+22. Найти путь к файлам у которых есть  “tf” в названии и буквы в любом регистре
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ find . -iname '*tf*'
+./inner_dir_1/tf_3.txt
+./inner_dir_1/tf_4.txt
+./inner_dir_1/tf_5.txt
+./tf_1.txt
+./tf_2.txt
+
+23. Найти строки в файлах где есть комбинация букв “sec” в текущей папке
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep sec *
+grep: inner_dir_1: Is a directory
+tf_2.txt:the second 2
+tf_2.txt:the sec 3
+
+24. Найти строки в файлах где есть комбинация букв “sec” в любом регистре в текущей папке
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -i sec *
+grep: inner_dir_1: Is a directory
+tf_2.txt:the second 2
+tf_2.txt:the sec 3
+tf_2.txt:the seConD 2
+
+25. Найти строки в файлах, где есть только комбинация букв “sec” в текущей папке
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -w sec *
+grep: inner_dir_1: Is a directory
+tf_2.txt:the sec 3
+
+26. Найти строки в файлах, где есть только комбинация букв “sec” в любом регистре в текущей папке
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -iw sec *
+grep: inner_dir_1: Is a directory
+tf_2.txt:the sec 3
+
+27. Найти строки в файлах где есть комбинация букв “second” в текущей папке
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep second *
+grep: inner_dir_1: Is a directory
+tf_2.txt:the second 2
+
+28. Найти строки в файлах где есть комбинация букв “second” в любом регистре в текущей папке
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -i second *
+grep: inner_dir_1: Is a directory
+tf_2.txt:the second 2
+tf_2.txt:the seConD 2
+
+29. Найти строки в файлах где есть комбинация букв “second” во всех папках ниже уровнем
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -r second */
+inner_dir_1/tf_3.txt:the second 2
+
+30. Найти только путь и название файла в строках которых есть комбинация букв “second” в текущей папке
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -l second *
+grep: inner_dir_1: Is a directory
+tf_2.txt
+
+31. Найти все строки во всех файлах где нет комбинации “second”
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -vr second
+inner_dir_1/tf_3.txt:1111
+inner_dir_1/tf_3.txt:2222
+inner_dir_1/tf_3.txt:3333
+inner_dir_1/tf_3.txt:the sec 2
+inner_dir_1/tf_3.txt:the SeCoNd 2
+inner_dir_1/tf_5.txt:1) 111
+inner_dir_1/tf_5.txt:2) 222
+inner_dir_1/tf_5.txt:3) 333
+inner_dir_1/tf_5.txt:4) 444
+inner_dir_1/tf_5.txt:5) 555
+inner_dir_1/tf_5.txt:6) 666
+inner_dir_1/tf_5.txt:7) 777
+inner_dir_1/tf_5.txt:8) 888
+inner_dir_1/tf_5.txt:9) 999
+inner_dir_1/tf_5.txt:10) 101010
+inner_dir_1/tf_5.txt:11) 111111
+inner_dir_1/tf_5.txt:12) 121212
+inner_dir_1/tf_5.txt:13) 131313
+tf_2.txt:the first 1
+tf_2.txt:the third 3
+tf_2.txt:the sec 3
+tf_2.txt:the seConD 2
+
+32. Найти только название и путь к файлам где нет комбинации “second”
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -Lr second
+inner_dir_1/tf_4.txt
+inner_dir_1/tf_5.txt
+tf_1.txt
+
+33. Вывести в терминал 4 последних строк любого текстового файла
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ tail -n4 inner_dir_1/tf_5.txt
+10) 101010
+11) 111111
+12) 121212
+13) 131313
+
+34. Вывести в терминал 4 первые строки любого текстового файла.
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ cd inner_dir_1
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ head -n4 tf_5.txt
+1) 111
+2) 222
+3) 333
+4) 444
+
+35. Команда в одну строку. Создать папку и создать текстовый файл с содержиммым.
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ mkdir inner_dir_2 | echo 12345 > tf_10.txt
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ ls
+inner_dir_1/  inner_dir_2/  tf_1.txt  tf_10.txt  tf_2.txt
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ cat tf_10.txt
+12345
+
+ 36. Команда в одну строку. Переместить в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -lr sec | xargs mv -t inner_dir_2
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ cd inner_dir_2
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_2
+$ ls
+tf_2.txt  tf_3.txt
+
+37. Команда в одну строку. Скопировать в любую одну папку текстовые файлы у которых в содержимом есть слово “sec”
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -lr sec | xargs cp -t inner_dir_1
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ cd inner_dir_1
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ ls
+tf_2.txt  tf_3.txt  tf_4.txt  tf_5.txt
+
+38. Команда в одну строку. Найти все строки c “sec” во всех текстовых файлах, скопировать и вставить эти строки в один новый созданный текстовый файл.
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1/inner_dir_1
+$ cd ..
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -ir -h sec . | xargs > tf_10.txt
+
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ cat tf_10.txt
+the second 2 the sec 3 the seConD 2 the second 2 the sec 2 the SeCoNd 2 the second 2 the sec 3 the seConD 2 the second 2 the sec 2 the SeCoNd 2 
+
+39. Команда в одну строку. Удалить текстовые файлы у которых в содержимом есть слово “sec”
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ grep -lr sec | xargs rm -f
+
+Все удалились!
+
+40. Просто вывести в терминал строку “Good job!!”
+medved@DESKTOP-59DF4KB MINGW64 /c/group_30_free/dir_1
+$ “Good job!!”
+“Good jobgrep -lr sec | xargs rm -f”
+bash: “Good: command not found
+rm: unknown option -- ▒
+Try 'rm --help' for more information.
+

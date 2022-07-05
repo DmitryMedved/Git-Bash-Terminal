@@ -1,7 +1,7 @@
 QA Course by Vadim Ksendzov
 
 TERMINAL homework 1
-Linux terminal (GitBash) commands
+
 
 HW_1. The first part
 Linux terminal (GitBash) commands

@@ -1,6 +1,7 @@
 QA Course by Vadim Ksendzov
 
 TERMINAL homework 1
+Linux terminal (GitBash) commands
 
 HW_1. The first part
 Linux terminal (GitBash) commands
@@ -42,7 +43,9 @@ http://162.55.220.72:5005/terminal-hw-request
 3) Зайти в папку - cd foldername
 
 
-Termial. HW_2
+HW_2. Вторая часть
+Linux terminal (GitBash) commands
+
 1. Сделать папку dir_1
  2. Зайти в папку dir_1
  3. Создать папку inner_dir_1
